@@ -2,92 +2,30 @@
 <html lang="vi">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vũ Tăng Ba | Portfolio Kỹ Thuật</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        :root { --primary-color: #004d99; --secondary-color: #0073e6; }
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f8f9fa; }
-        .hero-section { background: linear-gradient(135deg, var(--primary-color), var(--secondary-color)); color: white; padding: 100px 0; text-align: center; }
-        .card { border: none; transition: transform 0.3s; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
-        .card:hover { transform: translateY(-10px); }
-        .skill-badge { background: #e9ecef; color: #333; padding: 8px 15px; border-radius: 20px; display: inline-block; margin: 5px; font-weight: 500; }
-        .section-title { border-left: 5px solid var(--primary-color); padding-left: 15px; margin-bottom: 30px; margin-top: 50px; }
-        footer { background: #333; color: white; padding: 30px 0; margin-top: 80px; }
+        /* Đây là nơi "trang điểm" cho web */
+        body {
+            background-color: #f0f2f5; /* Màu nền xám nhạt */
+            color: #1c1e21; /* Màu chữ chính */
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        .robot-box {
+            background-color: white;
+            border: 2px solid #007bff;
+            padding: 20px;
+            border-radius: 15px;
+            display: inline-block;
+            margin-top: 50px;
+        }
     </style>
 </head>
 <body>
-
-    <header class="hero-section">
-        <div class="container">
-            <h1 class="display-4 fw-bold">VŨ TĂNG BA</h1>
-            <p class="lead">Kỹ Sư Tự Động Hóa & Điện Công Nghiệp</p>
-            <div class="mt-4">
-                <a href="mailto:vutangba@example.com" class="btn btn-outline-light"><i class="fas fa-envelope"></i> Liên hệ ngay</a>
-                <a href="https://github.com/vutangba" class="btn btn-light ms-2"><i class="fab fa-github"></i> GitHub</a>
-            </div>
-        </div>
-    </header>
-
-    <div class="container">
-        <h2 class="section-title">Về Tôi</h2>
-        <p>Tôi là sinh viên năm cuối chuyên ngành Kỹ thuật tại <b>HUIT</b>. Đam mê của tôi là nghiên cứu các hệ thống nhúng, robot thông minh và các giải pháp tự động hóa công nghiệp.</p>
-
-        <h2 class="section-title">Dự án tiêu biểu</h2>
-        <div class="row">
-            <div class="col-md-6 mb-4">
-                <div class="card h-100">
-                    <div class="card-body">
-                        <h5 class="card-title text-primary"><i class="fas fa-robot"></i> Robot Giải Rubik</h5>
-                        <p class="card-text">Nghiên cứu và chế tạo hệ thống Robot giải Rubik tự động sử dụng giải thuật <b>Kociemba</b>.</p>
-                        <ul>
-                            <li>Phần cứng: Arduino Mega, RAMPS 1.6, Stepper Motor.</li>
-                            <li>Xử lý ảnh: Python (OpenCV) nhận diện màu sắc.</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6 mb-4">
-                <div class="card h-100">
-                    <div class="card-body">
-                        <h5 class="card-title text-primary"><i class="fas fa-bolt"></i> Tự Động Hóa & Điện</h5>
-                        <p class="card-text">Thiết kế và thi công hệ thống điều khiển công nghiệp thực tế.</p>
-                        <ul>
-                            <li>Lập trình PLC (TIA Portal), thiết kế giao diện HMI.</li>
-                            <li>Đấu nối tủ điện ATS, tủ điều khiển motor, bóc tách khối lượng (BOQ).</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <h2 class="section-title">Kỹ năng chuyên môn</h2>
-        <div class="row bg-white p-4 rounded shadow-sm">
-            <div class="col-md-6">
-                <h5>Phần mềm & Thiết kế</h5>
-                <span class="skill-badge">AutoCAD</span>
-                <span class="skill-badge">Fusion 360</span>
-                <span class="skill-badge">TIA Portal</span>
-                <span class="skill-badge">MATLAB/Simulink</span>
-            </div>
-            <div class="col-md-6">
-                <h5>Lập trình & Điều khiển</h5>
-                <span class="skill-badge">Python (OpenCV)</span>
-                <span class="skill-badge">C++ (Arduino)</span>
-                <span class="skill-badge">PLC Programming</span>
-                <span class="skill-badge">Fuzzy Logic Control</span>
-            </div>
-        </div>
+    <div class="robot-box">
+        <h1>DỰ ÁN ROBOT GIẢI RUBIK</h1>
+        <p>Sinh viên thực hiện: <b>Vũ Tăng Ba</b></p>
+        <hr>
+        <p>Sử dụng: Arduino Mega | RAMPS 1.6 | Python</p>
     </div>
-
-    <footer class="text-center">
-        <div class="container">
-            <p>&copy; 2026 Vũ Tăng Ba - Built with <i class="fas fa-heart text-danger"></i> on GitHub Pages</p>
-            <small>Ho Chi Minh City, Vietnam</small>
-        </div>
-    </footer>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
