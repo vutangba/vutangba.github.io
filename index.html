@@ -25,7 +25,37 @@
             <h1 class="display-4 fw-bold">VŨ TĂNG BA</h1>
             <p class="lead">Kỹ Sư Tự Động Hóa</p>
             <div class="mt-4">
-                <a href="mailto:vutangba@gmail.com" class="btn btn-outline-light"><i class="fas fa-envelope"></i> Liên hệ ngay</a>
+                <div class="mt-4">
+    <button class="btn btn-outline-light" onclick="showGmail()">
+        <i class="fas fa-envelope"></i> Liên hệ ngay
+    </button>
+    <a href="https://github.com/vutangba" class="btn btn-light ms-2"><i class="fab fa-github"></i> GitHub</a>
+</div>
+
+<div id="gmail-info" class="text-center mt-3" style="display: none; animation: fadeIn 0.5s;">
+    <div class="p-3 border rounded bg-light d-inline-block shadow-sm">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/7/7e/Gmail_icon_%282020%29.svg" alt="Gmail Icon" style="width: 30px; margin-right: 10px;">
+        <span class="fw-bold text-dark" style="font-size: 1.1rem;">vutangba@gmail.com</span>
+    </div>
+</div>
+
+<style>
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(-10px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+</style>
+
+<script>
+    function showGmail() {
+        var x = document.getElementById("gmail-info");
+        if (x.style.display === "none") {
+            x.style.display = "block";
+        } else {
+            x.style.display = "none";
+        }
+    }
+</script>
                 <a href="https://github.com/vutangba" class="btn btn-light ms-2"><i class="fab fa-github"></i> GitHub</a>
             </div>
         </div>
