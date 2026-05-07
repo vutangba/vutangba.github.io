@@ -3,152 +3,91 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vũ Tăng Ba | Portfolio</title>
+    <title>Vũ Tăng Ba | Portfolio Kỹ Thuật</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        /* CSS Tối giản theo phong cách .cf */
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 40px 20px;
-            background-color: #fff;
-        }
-
-        header {
-            margin-bottom: 60px;
-        }
-
-        h1 {
-            font-size: 2.5rem;
-            font-weight: 700;
-            margin-bottom: 10px;
-            letter-spacing: -1px;
-        }
-
-        .subtitle {
-            color: #666;
-            font-size: 1.1rem;
-        }
-
-        section {
-            margin-bottom: 50px;
-        }
-
-        h2 {
-            font-size: 1.5rem;
-            border-bottom: 1px solid #eee;
-            padding-bottom: 10px;
-            margin-bottom: 25px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
-        .project-item {
-            margin-bottom: 30px;
-        }
-
-        .project-title {
-            font-weight: 600;
-            font-size: 1.2rem;
-            color: #000;
-            text-decoration: none;
-        }
-
-        .project-desc {
-            color: #555;
-            margin-top: 5px;
-        }
-
-        .video-container {
-            position: relative;
-            padding-bottom: 56.25%; /* Tỷ lệ 16:9 */
-            height: 0;
-            overflow: hidden;
-            border-radius: 8px;
-            background: #000;
-            margin: 20px 0;
-        }
-
-        .video-container iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-        }
-
-        .skills-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 20px;
-        }
-
-        .skill-cat {
-            font-weight: bold;
-            margin-bottom: 5px;
-        }
-
-        footer {
-            margin-top: 100px;
-            font-size: 0.9rem;
-            color: #999;
-            text-align: center;
-        }
-
-        a { color: #007bff; text-decoration: none; }
-        a:hover { text-decoration: underline; }
+        :root { --primary-color: #004d99; --secondary-color: #0073e6; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f8f9fa; }
+        .hero-section { background: linear-gradient(135deg, var(--primary-color), var(--secondary-color)); color: white; padding: 100px 0; text-align: center; }
+        .card { border: none; transition: transform 0.3s; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+        .card:hover { transform: translateY(-10px); }
+        .skill-badge { background: #e9ecef; color: #333; padding: 8px 15px; border-radius: 20px; display: inline-block; margin: 5px; font-weight: 500; }
+        .section-title { border-left: 5px solid var(--primary-color); padding-left: 15px; margin-bottom: 30px; margin-top: 50px; }
+        footer { background: #333; color: white; padding: 30px 0; margin-top: 80px; }
     </style>
 </head>
 <body>
 
-    <header>
-        <h1>Vũ Tăng Ba</h1>
-        <p class="subtitle">Kỹ sư Tự động hóa | Đam mê Robotics & Công nghệ</p>
+    <header class="hero-section">
+        <div class="container">
+            <h1 class="display-4 fw-bold">VŨ TĂNG BA</h1>
+            <p class="lead">Kỹ Sư Tự Động Hóa & Điện Công Nghiệp</p>
+            <div class="mt-4">
+                <a href="mailto:vutangba@example.com" class="btn btn-outline-light"><i class="fas fa-envelope"></i> Liên hệ ngay</a>
+                <a href="https://github.com/vutangba" class="btn btn-light ms-2"><i class="fab fa-github"></i> GitHub</a>
+            </div>
+        </div>
     </header>
 
-    <section id="projects">
-        <h2>Dự án tiêu biểu</h2>
-        
-        <div class="project-item">
-            <div class="project-title">Mô hình cánh tay giải khối Rubik 3x3</div>
-            <p class="project-desc">Nghiên cứu khoa học sinh viên 2025-2026. Sử dụng Arduino Mega, RAMPS 1.6 và giải thuật Kociemba điều khiển qua Python.</p>
-            
-            <div class="video-container">
-                <iframe src="https://www.youtube.com/embed/dSUgYRWBeRQ" frameborder="0" allowfullscreen></iframe>
+    <div class="container">
+        <h2 class="section-title">Về Tôi</h2>
+        <p>Tôi là sinh viên năm cuối chuyên ngành Kỹ thuật tại <b>HUIT</b>. Đam mê của tôi là nghiên cứu các hệ thống nhúng, robot thông minh và các giải pháp tự động hóa công nghiệp.</p>
+
+        <h2 class="section-title">Dự án tiêu biểu</h2>
+        <div class="row">
+            <div class="col-md-6 mb-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title text-primary"><i class="fas fa-robot"></i> Robot Giải Rubik</h5>
+                        <p class="card-text">Nghiên cứu và chế tạo hệ thống Robot giải Rubik tự động sử dụng giải thuật <b>Kociemba</b>.</p>
+                        <ul>
+                            <li>Phần cứng: Arduino Mega, RAMPS 1.6, Stepper Motor.</li>
+                            <li>Xử lý ảnh: Python (OpenCV) nhận diện màu sắc.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 mb-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title text-primary"><i class="fas fa-bolt"></i> Tự Động Hóa & Điện</h5>
+                        <p class="card-text">Thiết kế và thi công hệ thống điều khiển công nghiệp thực tế.</p>
+                        <ul>
+                            <li>Lập trình PLC (TIA Portal), thiết kế giao diện HMI.</li>
+                            <li>Đấu nối tủ điện ATS, tủ điều khiển motor, bóc tách khối lượng (BOQ).</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </div>
 
-        <div class="project-item">
-            <div class="project-title">Hệ thống điện & PLC</div>
-            <p class="project-desc">Thiết kế tủ điện ATS, lập trình hệ thống điều khiển công nghiệp bằng TIA Portal.</p>
-        </div>
-    </section>
-
-    <section id="skills">
-        <h2>Kỹ năng</h2>
-        <div class="skills-grid">
-            <div>
-                <div class="skill-cat">Phần cứng & Thiết kế</div>
-                AutoCAD, Fusion 360, RAMPS 1.6, PLC S7-1200.
+        <h2 class="section-title">Kỹ năng chuyên môn</h2>
+        <div class="row bg-white p-4 rounded shadow-sm">
+            <div class="col-md-6">
+                <h5>Phần mềm & Thiết kế</h5>
+                <span class="skill-badge">AutoCAD</span>
+                <span class="skill-badge">Fusion 360</span>
+                <span class="skill-badge">TIA Portal</span>
+                <span class="skill-badge">MATLAB/Simulink</span>
             </div>
-            <div>
-                <div class="skill-cat">Lập trình</div>
-                C++ (Arduino), Python (OpenCV), TIA Portal, MATLAB.
+            <div class="col-md-6">
+                <h5>Lập trình & Điều khiển</h5>
+                <span class="skill-badge">Python (OpenCV)</span>
+                <span class="skill-badge">C++ (Arduino)</span>
+                <span class="skill-badge">PLC Programming</span>
+                <span class="skill-badge">Fuzzy Logic Control</span>
             </div>
         </div>
-    </section>
+    </div>
 
-    <section id="contact">
-        <h2>Liên hệ</h2>
-        <p>Email: <a href="mailto:vutangba@example.com">vutangba@example.com</a></p>
-        <p>GitHub: <a href="https://github.com/vutangba">github.com/vutangba</a></p>
-    </section>
-
-    <footer>
-        &copy; 2026 Vũ Tăng Ba. Nội dung được bảo mật.
+    <footer class="text-center">
+        <div class="container">
+            <p>&copy; 2026 Vũ Tăng Ba - Built with <i class="fas fa-heart text-danger"></i> on GitHub Pages</p>
+            <small>Ho Chi Minh City, Vietnam</small>
+        </div>
     </footer>
 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
