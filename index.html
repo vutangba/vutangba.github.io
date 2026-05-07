@@ -1,10 +1,154 @@
-<div style="text-align: center; margin: 20px 0;">
-    <iframe width="560" height="315" 
-        src="https://www.youtube.com/embed/dSUgYRWBeRQ" 
-        title="YouTube video player" 
-        frameborder="0" 
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-        referrerpolicy="strict-origin-when-cross-origin" 
-        allowfullscreen>
-    </iframe>
-</div>
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vũ Tăng Ba | Portfolio</title>
+    <style>
+        /* CSS Tối giản theo phong cách .cf */
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            background-color: #fff;
+        }
+
+        header {
+            margin-bottom: 60px;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            letter-spacing: -1px;
+        }
+
+        .subtitle {
+            color: #666;
+            font-size: 1.1rem;
+        }
+
+        section {
+            margin-bottom: 50px;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 10px;
+            margin-bottom: 25px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .project-item {
+            margin-bottom: 30px;
+        }
+
+        .project-title {
+            font-weight: 600;
+            font-size: 1.2rem;
+            color: #000;
+            text-decoration: none;
+        }
+
+        .project-desc {
+            color: #555;
+            margin-top: 5px;
+        }
+
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%; /* Tỷ lệ 16:9 */
+            height: 0;
+            overflow: hidden;
+            border-radius: 8px;
+            background: #000;
+            margin: 20px 0;
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .skill-cat {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        footer {
+            margin-top: 100px;
+            font-size: 0.9rem;
+            color: #999;
+            text-align: center;
+        }
+
+        a { color: #007bff; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Vũ Tăng Ba</h1>
+        <p class="subtitle">Kỹ sư Tự động hóa | Đam mê Robotics & Công nghệ</p>
+    </header>
+
+    <section id="projects">
+        <h2>Dự án tiêu biểu</h2>
+        
+        <div class="project-item">
+            <div class="project-title">Mô hình cánh tay giải khối Rubik 3x3</div>
+            <p class="project-desc">Nghiên cứu khoa học sinh viên 2025-2026. Sử dụng Arduino Mega, RAMPS 1.6 và giải thuật Kociemba điều khiển qua Python.</p>
+            
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/dSUgYRWBeRQ" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>
+
+        <div class="project-item">
+            <div class="project-title">Hệ thống điện & PLC</div>
+            <p class="project-desc">Thiết kế tủ điện ATS, lập trình hệ thống điều khiển công nghiệp bằng TIA Portal.</p>
+        </div>
+    </section>
+
+    <section id="skills">
+        <h2>Kỹ năng</h2>
+        <div class="skills-grid">
+            <div>
+                <div class="skill-cat">Phần cứng & Thiết kế</div>
+                AutoCAD, Fusion 360, RAMPS 1.6, PLC S7-1200.
+            </div>
+            <div>
+                <div class="skill-cat">Lập trình</div>
+                C++ (Arduino), Python (OpenCV), TIA Portal, MATLAB.
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Liên hệ</h2>
+        <p>Email: <a href="mailto:vutangba@example.com">vutangba@example.com</a></p>
+        <p>GitHub: <a href="https://github.com/vutangba">github.com/vutangba</a></p>
+    </section>
+
+    <footer>
+        &copy; 2026 Vũ Tăng Ba. Nội dung được bảo mật.
+    </footer>
+
+</body>
+</html>
