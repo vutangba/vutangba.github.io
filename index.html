@@ -17,25 +17,48 @@
         .section-title { border-left: 5px solid var(--primary-color); padding-left: 15px; margin-bottom: 30px; margin-top: 50px; }
         footer { background: #333; color: white; padding: 30px 0; margin-top: 80px; }
     </style>
-<header class="hero-section">
-    <div class="container">
-        <h1 class="display-4 fw-bold">VŨ TĂNG BA</h1>
-        <p class="lead">Kỹ Sư Tự Động Hóa</p>
-        <div class="mt-4">
-            <button class="btn btn-outline-light" onclick="showGmail()">
-                <i class="fas fa-envelope"></i> Liên hệ ngay
-            </button>
-        </div>
+</head>
+<body>
 
-        <div id="gmail-info" class="text-center mt-3" style="display: none; animation: fadeIn 0.5s;">
-            <div class="p-3 border rounded bg-light d-inline-block shadow-sm">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/7/7e/Gmail_icon_%282020%29.svg" alt="Gmail Icon" style="width: 30px; margin-right: 10px;">
-                <span class="fw-bold text-dark" style="font-size: 1.1rem;">vutangba@gmail.com</span>
-            </div>
-        </div>
-    </div>
-</header>
-</body>
+    <header class="hero-section">
+        <div class="container">
+            <h1 class="display-4 fw-bold">VŨ TĂNG BA</h1>
+            <p class="lead">Kỹ Sư Tự Động Hóa</p>
+            <div class="mt-4">
+                <div class="mt-4">
+    <button class="btn btn-outline-light" onclick="showGmail()">
+        <i class="fas fa-envelope"></i> Liên hệ ngay
+    </button>
+    <a href="https://github.com/vutangba" class="btn btn-light ms-2"><i class="fab fa-github"></i> GitHub</a>
+</div>
+
+<div id="gmail-info" class="text-center mt-3" style="display: none; animation: fadeIn 0.5s;">
+    <div class="p-3 border rounded bg-light d-inline-block shadow-sm">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/7/7e/Gmail_icon_%282020%29.svg" alt="Gmail Icon" style="width: 30px; margin-right: 10px;">
+        <span class="fw-bold text-dark" style="font-size: 1.1rem;">vutangba@gmail.com</span>
+    </div>
+</div>
+
+<style>
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(-10px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+</style>
+
+<script>
+    function showGmail() {
+        var x = document.getElementById("gmail-info");
+        if (x.style.display === "none") {
+            x.style.display = "block";
+        } else {
+            x.style.display = "none";
+        }
+    }
+</script>
+
+    </header>
+
  <h2 class="section-title">Danh mục quản lý</h2>
 <div class="row g-3">
     <div class="col-md-6">
