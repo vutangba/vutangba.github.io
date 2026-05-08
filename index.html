@@ -1,23 +1,23 @@
 <!DOCTYPE html>
 <html lang="vi">
-<head>
-    <link rel="icon" type="image/png" href="assets/img/conrua.jpg">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vũ Tăng Ba | Portfolio Kỹ Thuật</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <style>
-        :root { --primary-color: #004d99; --secondary-color: #0073e6; }
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f8f9fa; }
-        .hero-section { background: linear-gradient(135deg, var(--primary-color), var(--secondary-color)); color: white; padding: 100px 0; text-align: center; }
-        .card { border: none; transition: transform 0.3s; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
-        .card:hover { transform: translateY(-10px); }
-        .skill-badge { background: #e9ecef; color: #333; padding: 8px 15px; border-radius: 20px; display: inline-block; margin: 5px; font-weight: 500; }
-        .section-title { border-left: 5px solid var(--primary-color); padding-left: 15px; margin-bottom: 30px; margin-top: 50px; }
-        footer { background: #333; color: white; padding: 30px 0; margin-top: 80px; }
-    </style>
-</head>
+<header class="hero-section">
+    <div class="container">
+        <h1 class="display-4 fw-bold">VŨ TĂNG BA</h1>
+        <p class="lead">Kỹ Sư Tự Động Hóa</p>
+        <div class="mt-4">
+            <button class="btn btn-outline-light" onclick="showGmail()">
+                <i class="fas fa-envelope"></i> Liên hệ ngay
+            </button>
+        </div>
+
+        <div id="gmail-info" class="text-center mt-3" style="display: none; animation: fadeIn 0.5s;">
+            <div class="p-3 border rounded bg-light d-inline-block shadow-sm">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/7/7e/Gmail_icon_%282020%29.svg" alt="Gmail Icon" style="width: 30px; margin-right: 10px;">
+                <span class="fw-bold text-dark" style="font-size: 1.1rem;">vutangba@gmail.com</span>
+            </div>
+        </div>
+    </div>
+</header>
 <body>
 
     <header class="hero-section">
