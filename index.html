@@ -1,5 +1,23 @@
 <!DOCTYPE html>
 <html lang="vi">
+<head>
+    <link rel="icon" type="image/png" href="assets/img/conrua.jpg">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vũ Tăng Ba | Portfolio Kỹ Thuật</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root { --primary-color: #004d99; --secondary-color: #0073e6; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f8f9fa; }
+        .hero-section { background: linear-gradient(135deg, var(--primary-color), var(--secondary-color)); color: white; padding: 100px 0; text-align: center; }
+        .card { border: none; transition: transform 0.3s; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+        .card:hover { transform: translateY(-10px); }
+        .skill-badge { background: #e9ecef; color: #333; padding: 8px 15px; border-radius: 20px; display: inline-block; margin: 5px; font-weight: 500; }
+        .section-title { border-left: 5px solid var(--primary-color); padding-left: 15px; margin-bottom: 30px; margin-top: 50px; }
+        footer { background: #333; color: white; padding: 30px 0; margin-top: 80px; }
+    </style>
+</head>
 <header class="hero-section">
     <div class="container">
         <h1 class="display-4 fw-bold">VŨ TĂNG BA</h1>
@@ -18,92 +36,54 @@
         </div>
     </div>
 </header>
-<body>
-
-    <header class="hero-section">
-        <div class="container">
-            <h1 class="display-4 fw-bold">VŨ TĂNG BA</h1>
-            <p class="lead">Kỹ Sư Tự Động Hóa</p>
-            <div class="mt-4">
-                <div class="mt-4">
-    <button class="btn btn-outline-light" onclick="showGmail()">
-        <i class="fas fa-envelope"></i> Liên hệ ngay
-    </button>
-    <a href="https://github.com/vutangba" class="btn btn-light ms-2"><i class="fab fa-github"></i> GitHub</a>
-</div>
-
-<div id="gmail-info" class="text-center mt-3" style="display: none; animation: fadeIn 0.5s;">
-    <div class="p-3 border rounded bg-light d-inline-block shadow-sm">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/7/7e/Gmail_icon_%282020%29.svg" alt="Gmail Icon" style="width: 30px; margin-right: 10px;">
-        <span class="fw-bold text-dark" style="font-size: 1.1rem;">vutangba@gmail.com</span>
-    </div>
-</div>
-
-<style>
-    @keyframes fadeIn {
-        from { opacity: 0; transform: translateY(-10px); }
-        to { opacity: 1; transform: translateY(0); }
-    }
-</style>
-
-<script>
-    function showGmail() {
-        var x = document.getElementById("gmail-info");
-        if (x.style.display === "none") {
-            x.style.display = "block";
-        } else {
-            x.style.display = "none";
-        }
-    }
-</script>
-
-    </header>
-
- <h2 class="section-title">Danh mục quản lý</h2>
-<div class="row g-3">
-    <div class="col-md-6">
-        <div class="p-4 border rounded bg-white shadow-sm h-100 text-center">
-            <i class="fas fa-project-diagram fa-3x mb-3 text-primary"></i>
-            <h4>Dự án đã làm</h4>
-            <p class="text-muted">Xem chi tiết các mô hình Robot và hệ thống tự động hóa.</p>
-            <a href="du-an.html" target="_blank" class="btn btn-primary">
-                <i class="fas fa-external-link-alt"></i> Xem nội dung
-            </a>
-        </div>
-    </div>
-
-    <div class="col-md-6">
-        <div class="p-4 border rounded bg-white shadow-sm h-100 text-center">
-            <i class="fas fa-folder-open fa-3x mb-3 text-warning"></i>
-            <h4>Tài liệu kỹ thuật</h4>
-            <p class="text-muted">Báo cáo thực tập, bản vẽ AutoCAD và tài liệu hướng dẫn.</p>
-            <a href="https://drive.google.com/drive/folders/1Xh3b2O-SmUVYTFekAPEeYLDRznrBDmh7?usp=sharing" target="_blank" class="btn btn-outline-dark">
-                <i class="fab fa-google-drive"></i> Truy cập Google Drive
-            </a>
-        </div>
-    </div>
-</div>
-
-    <footer class="text-center">
-        <div class="container">
-            <p>&copy; 2026 Vũ Tăng Ba - Built with <i class="fas fa-heart text-danger"></i> on GitHub Pages</p>
-            <small>Ho Chi Minh City, Vietnam</small>
-        </div>
-    </footer>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
-                <script>
-    // Ngăn chặn chuột phải
-    document.addEventListener('contextmenu', event => event.preventDefault());
+ <h2 class="section-title">Danh mục quản lý</h2>
+<div class="row g-3">
+    <div class="col-md-6">
+        <div class="p-4 border rounded bg-white shadow-sm h-100 text-center">
+            <i class="fas fa-project-diagram fa-3x mb-3 text-primary"></i>
+            <h4>Dự án đã làm</h4>
+            <p class="text-muted">Xem chi tiết các mô hình Robot và hệ thống tự động hóa.</p>
+            <a href="du-an.html" target="_blank" class="btn btn-primary">
+                <i class="fas fa-external-link-alt"></i> Xem nội dung
+            </a>
+        </div>
+    </div>
 
-    // Ngăn chặn các phím tắt F12, Ctrl+Shift+I, Ctrl+Shift+J, Ctrl+U
-    document.onkeydown = function(e) {
-        if (e.keyCode == 123 || 
-            (e.ctrlKey && e.shiftKey && (e.keyCode == 'I'.charCodeAt(0) || e.keyCode == 'J'.charCodeAt(0))) || 
-            (e.ctrlKey && e.keyCode == 'U'.charCodeAt(0))) {
-            return false;
-        }
-    };
+    <div class="col-md-6">
+        <div class="p-4 border rounded bg-white shadow-sm h-100 text-center">
+            <i class="fas fa-folder-open fa-3x mb-3 text-warning"></i>
+            <h4>Tài liệu kỹ thuật</h4>
+            <p class="text-muted">Báo cáo thực tập, bản vẽ AutoCAD và tài liệu hướng dẫn.</p>
+            <a href="https://drive.google.com/drive/folders/1Xh3b2O-SmUVYTFekAPEeYLDRznrBDmh7?usp=sharing" target="_blank" class="btn btn-outline-dark">
+                <i class="fab fa-google-drive"></i> Truy cập Google Drive
+            </a>
+        </div>
+    </div>
+</div>
+
+    <footer class="text-center">
+        <div class="container">
+            <p>&copy; 2026 Vũ Tăng Ba - Built with <i class="fas fa-heart text-danger"></i> on GitHub Pages</p>
+            <small>Ho Chi Minh City, Vietnam</small>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+                <script>
+    // Ngăn chặn chuột phải
+    document.addEventListener('contextmenu', event => event.preventDefault());
+
+    // Ngăn chặn các phím tắt F12, Ctrl+Shift+I, Ctrl+Shift+J, Ctrl+U
+    document.onkeydown = function(e) {
+        if (e.keyCode == 123 || 
+            (e.ctrlKey && e.shiftKey && (e.keyCode == 'I'.charCodeAt(0) || e.keyCode == 'J'.charCodeAt(0))) || 
+            (e.ctrlKey && e.keyCode == 'U'.charCodeAt(0))) {
+            return false;
+        }
+    };
 </script>
 </html>
+
+tôi muốn bỏ phần github chỉ để liên hệ ngay thôi
