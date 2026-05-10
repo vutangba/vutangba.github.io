@@ -4,33 +4,53 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Danh Mục Dự Án | Vũ Tăng Ba</title>
+    
     <link rel="icon" type="image/png" href="assets/img/conrua.jpg">
+    
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     
     <style>
-        :root { --primary-color: #004d99; }
-        body { font-family: 'Segoe UI', sans-serif; background-color: #f8f9fa; }
+        /* Sử dụng mã màu đồng bộ với trang chính */
+        :root { 
+            --primary-color: #004d99; 
+            --secondary-color: #0073e6;
+        }
         
-        .header-simple { padding: 60px 0; background: white; border-bottom: 1px solid #eee; margin-bottom: 40px; }
+        body { 
+            font-family: 'Segoe UI', sans-serif; 
+            background-color: #f8f9fa; 
+            color: #333; 
+        }
         
-        /* Hiệu ứng thẻ dự án tối giản */
+        /* Header sử dụng Gradient giống hệt trang index */
+        .project-header { 
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color)); 
+            color: white; 
+            padding: 80px 0; 
+            margin-bottom: 50px; 
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        /* Thẻ dự án tối giản */
         .project-item {
             position: relative;
             border-radius: 15px;
             overflow: hidden;
             background: #000;
             margin-bottom: 30px;
-            aspect-ratio: 16 / 10; /* Giữ tỉ lệ khung hình đều nhau */
+            aspect-ratio: 16 / 10;
             cursor: pointer;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+            border: none;
         }
 
         .project-item img {
             width: 100%;
             height: 100%;
             object-fit: cover;
-            transition: 0.5s;
-            opacity: 0.8;
+            transition: 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            opacity: 0.85;
         }
 
         /* Lớp phủ tên dự án */
@@ -39,47 +59,51 @@
             bottom: 0;
             left: 0;
             right: 0;
-            padding: 20px;
-            background: linear-gradient(transparent, rgba(0,0,0,0.8));
+            padding: 25px;
+            background: linear-gradient(transparent, rgba(0,0,0,0.85));
             color: white;
             transition: 0.3s;
         }
 
         .project-item:hover img {
-            transform: scale(1.1);
+            transform: scale(1.08);
             opacity: 1;
         }
 
-        .project-item:hover .project-overlay {
-            padding-bottom: 30px;
+        .project-name { 
+            font-size: 1.2rem; 
+            font-weight: 700; 
+            margin: 0; 
+            text-transform: uppercase;
+            letter-spacing: 1px;
         }
 
-        .project-name { font-size: 1.25rem; font-weight: bold; margin: 0; }
-        
-        footer { padding: 40px 0; color: #999; font-size: 0.9rem; }
-        
-        .btn-home { color: var(--primary-color); text-decoration: none; font-weight: 600; }
+        footer { 
+            background: #333; 
+            color: #ccc; 
+            padding: 40px 0; 
+            margin-top: 60px; 
+        }
     </style>
 </head>
 <body oncontextmenu="return false;">
 
-    <div class="header-simple text-center">
+    <header class="project-header text-center">
         <div class="container">
-            <a href="index.html" class="btn-home mb-3 d-inline-block"><i class="fas fa-arrow-left"></i> Quay lại trang chủ</a>
-            <h1 class="fw-bold">DANH MỤC DỰ ÁN</h1>
-            <p class="text-muted">Nhấn vào từng dự án để xem nội dung chi tiết</p>
+            <h1 class="display-5 fw-bold">DANH MỤC DỰ ÁN</h1>
+            <p class="lead opacity-75">Tổng hợp các nghiên cứu và sản phẩm kỹ thuật tiêu biểu</p>
         </div>
-    </div>
+    </header>
 
     <div class="container">
-        <div class="row" id="project-grid">
+        <div class="row">
 
             <div class="col-md-6 col-lg-4">
                 <a href="du-an-rubik.html" class="text-decoration-none">
-                    <div class="project-item shadow">
-                        <img src="https://via.placeholder.com/600x400?text=Robot+Rubik+3x3" alt="Robot Rubik">
+                    <div class="project-item">
+                        <img src="assets/img/rubik-thumb.jpg" alt="Robot Rubik">
                         <div class="project-overlay">
-                            <p class="project-name text-uppercase">Robot Giải Rubik 3x3</p>
+                            <p class="project-name">Robot Giải Rubik 3x3</p>
                         </div>
                     </div>
                 </a>
@@ -87,10 +111,10 @@
 
             <div class="col-md-6 col-lg-4">
                 <a href="du-an-plc.html" class="text-decoration-none">
-                    <div class="project-item shadow">
-                        <img src="https://via.placeholder.com/600x400?text=Hệ+Thống+PLC+ATS" alt="PLC ATS">
+                    <div class="project-item">
+                        <img src="assets/img/plc-thumb.jpg" alt="Hệ thống PLC">
                         <div class="project-overlay">
-                            <p class="project-name text-uppercase">Hệ Thống PLC & ATS</p>
+                            <p class="project-name">Hệ Thống PLC & ATS</p>
                         </div>
                     </div>
                 </a>
@@ -98,10 +122,10 @@
 
             <div class="col-md-6 col-lg-4">
                 <a href="du-an-moi.html" class="text-decoration-none">
-                    <div class="project-item shadow">
-                        <img src="https://via.placeholder.com/600x400?text=Đề+Tài+Mới" alt="Project">
+                    <div class="project-item">
+                        <img src="https://via.placeholder.com/600x400?text=Project+Coming+Soon" alt="Dự án mới">
                         <div class="project-overlay">
-                            <p class="project-name text-uppercase">Tên Đề Tài Mới</p>
+                            <p class="project-name">Đề Tài Nghiên Cứu Mới</p>
                         </div>
                     </div>
                 </a>
@@ -111,11 +135,13 @@
     </div>
 
     <footer class="text-center">
-        <p>&copy; 2026 Vũ Tăng Ba - Portfolio Kỹ Thuật</p>
+        <div class="container">
+            <p class="mb-0">&copy; 2026 Vũ Tăng Ba - Engineering Portfolio</p>
+        </div>
     </footer>
 
     <script>
-        // Chặn F12
+        // Bảo mật code: Chặn chuột phải và phím tắt F12
         document.onkeydown = function(e) {
             if (e.keyCode == 123 || (e.ctrlKey && e.shiftKey && (e.keyCode == 'I'.charCodeAt(0) || e.keyCode == 'J'.charCodeAt(0))) || (e.ctrlKey && e.keyCode == 'U'.charCodeAt(0))) return false;
         };
