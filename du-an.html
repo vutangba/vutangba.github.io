@@ -1,96 +1,121 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-    <link rel="icon" type="image/png" href="assets/img/conrua.jpg">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Danh Mục Dự Án | Vũ Tăng Ba</title>
-    <link rel="icon" type="image/png" href="assets/img/favicon.png">
+    <link rel="icon" type="image/png" href="assets/img/conrua.jpg">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
     <style>
         :root { --primary-color: #004d99; }
-        body { font-family: 'Segoe UI', sans-serif; background-color: #f4f7f6; color: #333; }
-        .project-header { background: linear-gradient(rgba(0, 77, 153, 0.9), rgba(0, 77, 153, 0.9)); color: white; padding: 60px 0; margin-bottom: 40px; }
-        .project-card { background: white; border-radius: 15px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.05); margin-bottom: 50px; border: none; padding: 30px; }
-        .tech-badge { background: #e3f2fd; color: #0d47a1; padding: 5px 12px; border-radius: 5px; font-size: 0.85rem; margin-right: 5px; margin-bottom: 5px; display: inline-block; font-weight: 600; }
-        .section-line { width: 60px; height: 4px; background: var(--primary-color); margin: 20px 0; }
-        .media-container { border-radius: 10px; overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.1); background: #000; position: relative; }
-        .video-wrapper { position: relative; padding-bottom: 56.25%; height: 0; }
-        .video-wrapper iframe, .video-wrapper video { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none; }
-        footer { background: #222; color: #888; padding: 40px 0; text-align: center; }
+        body { font-family: 'Segoe UI', sans-serif; background-color: #f8f9fa; }
+        
+        .header-simple { padding: 60px 0; background: white; border-bottom: 1px solid #eee; margin-bottom: 40px; }
+        
+        /* Hiệu ứng thẻ dự án tối giản */
+        .project-item {
+            position: relative;
+            border-radius: 15px;
+            overflow: hidden;
+            background: #000;
+            margin-bottom: 30px;
+            aspect-ratio: 16 / 10; /* Giữ tỉ lệ khung hình đều nhau */
+            cursor: pointer;
+        }
+
+        .project-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: 0.5s;
+            opacity: 0.8;
+        }
+
+        /* Lớp phủ tên dự án */
+        .project-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 20px;
+            background: linear-gradient(transparent, rgba(0,0,0,0.8));
+            color: white;
+            transition: 0.3s;
+        }
+
+        .project-item:hover img {
+            transform: scale(1.1);
+            opacity: 1;
+        }
+
+        .project-item:hover .project-overlay {
+            padding-bottom: 30px;
+        }
+
+        .project-name { font-size: 1.25rem; font-weight: bold; margin: 0; }
+        
+        footer { padding: 40px 0; color: #999; font-size: 0.9rem; }
+        
+        .btn-home { color: var(--primary-color); text-decoration: none; font-weight: 600; }
     </style>
 </head>
 <body oncontextmenu="return false;">
 
-    <header class="project-header text-center">
+    <div class="header-simple text-center">
         <div class="container">
-            <h1 class="display-5 fw-bold">DANH MỤC DỰ ÁN</h1>
-            <p class="lead">Tổng hợp các nghiên cứu và sản phẩm kỹ thuật tiêu biểu</p>
+            <a href="index.html" class="btn-home mb-3 d-inline-block"><i class="fas fa-arrow-left"></i> Quay lại trang chủ</a>
+            <h1 class="fw-bold">DANH MỤC DỰ ÁN</h1>
+            <p class="text-muted">Nhấn vào từng dự án để xem nội dung chi tiết</p>
         </div>
-    </header>
+    </div>
 
-    <div class="container" id="project-list">
+    <div class="container">
+        <div class="row" id="project-grid">
 
-        <div class="project-card">
-            <div class="row align-items-center">
-                <div class="col-lg-6 mb-4 mb-lg-0">
-                    <div class="media-container">
-                        <div class="video-wrapper">
-                            <iframe src="https://www.youtube.com/embed/dSUgYRWBeRQ"></iframe>
+            <div class="col-md-6 col-lg-4">
+                <a href="du-an-rubik.html" class="text-decoration-none">
+                    <div class="project-item shadow">
+                        <img src="https://via.placeholder.com/600x400?text=Robot+Rubik+3x3" alt="Robot Rubik">
+                        <div class="project-overlay">
+                            <p class="project-name text-uppercase">Robot Giải Rubik 3x3</p>
                         </div>
                     </div>
-                </div>
-                <div class="col-lg-6">
-                    <h2 class="fw-bold text-primary">Robot Giải Rubik 3x3</h2>
-                    <div class="section-line"></div>
-                    <p class="text-muted">Nghiên cứu chế tạo hệ thống giải Rubik tự động sử dụng xử lý ảnh Python.</p>
-                    <div class="mb-3">
-                        <span class="tech-badge">Arduino Mega</span>
-                        <span class="tech-badge">Python (OpenCV)</span>
-                        <span class="tech-badge">Kociemba Algorithm</span>
-                    </div>
-                    <ul class="list-unstyled">
-                        <li><i class="fas fa-check text-success me-2"></i> Nhận diện màu sắc cực nhanh.</li>
-                        <li><i class="fas fa-check text-success me-2"></i> Cơ cấu chấp hành chính xác.</li>
-                    </ul>
-                </div>
+                </a>
             </div>
-        </div>
 
-        <div class="project-card">
-            <div class="row flex-row-reverse align-items-center">
-                <div class="col-lg-6 mb-4 mb-lg-0 text-center">
-                    <div class="media-container">
-                        <img src="https://via.placeholder.com/600x340?text=Sơ+Đồ+Tủ+Điện+PLC" class="img-fluid">
+            <div class="col-md-6 col-lg-4">
+                <a href="du-an-plc.html" class="text-decoration-none">
+                    <div class="project-item shadow">
+                        <img src="https://via.placeholder.com/600x400?text=Hệ+Thống+PLC+ATS" alt="PLC ATS">
+                        <div class="project-overlay">
+                            <p class="project-name text-uppercase">Hệ Thống PLC & ATS</p>
+                        </div>
                     </div>
-                </div>
-                <div class="col-lg-6">
-                    <h2 class="fw-bold text-primary">Hệ Thống PLC & ATS</h2>
-                    <div class="section-line"></div>
-                    <p class="text-muted">Thiết kế và thi công tủ điện điều khiển công nghiệp thực tế.</p>
-                    <div class="mb-3">
-                        <span class="tech-badge">TIA Portal</span>
-                        <span class="tech-badge">S7-1200</span>
-                        <span class="tech-badge">AutoCAD Electrical</span>
-                    </div>
-                    <ul class="list-unstyled">
-                        <li><i class="fas fa-check text-success me-2"></i> Lập trình logic điều khiển ATS.</li>
-                        <li><i class="fas fa-check text-success me-2"></i> Bóc tách khối lượng vật tư (BOQ).</li>
-                    </ul>
-                </div>
+                </a>
             </div>
-        </div>
+
+            <div class="col-md-6 col-lg-4">
+                <a href="du-an-moi.html" class="text-decoration-none">
+                    <div class="project-item shadow">
+                        <img src="https://via.placeholder.com/600x400?text=Đề+Tài+Mới" alt="Project">
+                        <div class="project-overlay">
+                            <p class="project-name text-uppercase">Tên Đề Tài Mới</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
 
         </div>
+    </div>
 
-    <footer>
-        <div class="container text-center">
-            <p>&copy; 2026 Vũ Tăng Ba - Engineering Portfolio</p>
-        </div>
+    <footer class="text-center">
+        <p>&copy; 2026 Vũ Tăng Ba - Portfolio Kỹ Thuật</p>
     </footer>
 
     <script>
+        // Chặn F12
         document.onkeydown = function(e) {
             if (e.keyCode == 123 || (e.ctrlKey && e.shiftKey && (e.keyCode == 'I'.charCodeAt(0) || e.keyCode == 'J'.charCodeAt(0))) || (e.ctrlKey && e.keyCode == 'U'.charCodeAt(0))) return false;
         };
