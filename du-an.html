@@ -3,71 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chi Tiết Dự Án</title>
+    <title>Danh Mục Dự Án | Vũ Tăng Ba</title>
     <link rel="icon" type="image/png" href="assets/img/favicon.png">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        :root { --primary-color: #004d99; --accent-color: #00c853; }
+        :root { --primary-color: #004d99; }
         body { font-family: 'Segoe UI', sans-serif; background-color: #f4f7f6; color: #333; }
-        
-        .project-header { 
-            background: linear-gradient(rgba(0, 77, 153, 0.9), rgba(0, 77, 153, 0.9)), url('https://vutangba.github.io/assets/img/background-tech.jpg');
-            background-size: cover;
-            color: white; 
-            padding: 60px 0; 
-            margin-bottom: 40px;
-        }
-
-        .back-btn { margin-bottom: 20px; display: inline-block; color: white; text-decoration: none; }
-        .back-btn:hover { color: #ccc; }
-
-        .project-card {
-            background: white;
-            border-radius: 15px;
-            overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-            margin-bottom: 50px;
-            border: none;
-        }
-
-        .tech-badge {
-            background: #e3f2fd;
-            color: #0d47a1;
-            padding: 5px 12px;
-            border-radius: 5px;
-            font-size: 0.85rem;
-            margin-right: 5px;
-            margin-bottom: 5px;
-            display: inline-block;
-            font-weight: 600;
-        }
-
-        .video-container {
-            position: relative;
-            padding-bottom: 56.25%;
-            height: 0;
-            overflow: hidden;
-            border-radius: 10px;
-            background: #000;
-        }
-
-        .video-container iframe {
-            position: absolute;
-            top: 0; left: 0; width: 100%; height: 100%;
-        }
-
-        .section-line {
-            width: 60px;
-            height: 4px;
-            background: var(--primary-color);
-            margin: 20px 0;
-        }
-
+        .project-header { background: linear-gradient(rgba(0, 77, 153, 0.9), rgba(0, 77, 153, 0.9)); color: white; padding: 60px 0; margin-bottom: 40px; }
+        .project-card { background: white; border-radius: 15px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.05); margin-bottom: 50px; border: none; padding: 30px; }
+        .tech-badge { background: #e3f2fd; color: #0d47a1; padding: 5px 12px; border-radius: 5px; font-size: 0.85rem; margin-right: 5px; margin-bottom: 5px; display: inline-block; font-weight: 600; }
+        .section-line { width: 60px; height: 4px; background: var(--primary-color); margin: 20px 0; }
+        .media-container { border-radius: 10px; overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.1); background: #000; position: relative; }
+        .video-wrapper { position: relative; padding-bottom: 56.25%; height: 0; }
+        .video-wrapper iframe, .video-wrapper video { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none; }
         footer { background: #222; color: #888; padding: 40px 0; text-align: center; }
     </style>
 </head>
-<body>
+<body oncontextmenu="return false;">
 
     <header class="project-header text-center">
         <div class="container">
@@ -76,87 +29,70 @@
         </div>
     </header>
 
-    <div class="container">
-        
-        <div class="project-card p-4 p-md-5">
+    <div class="container" id="project-list">
+
+        <div class="project-card">
             <div class="row align-items-center">
                 <div class="col-lg-6 mb-4 mb-lg-0">
-                    <div class="video-container shadow-lg">
-                        <iframe src="https://www.youtube.com/embed/dSUgYRWBeRQ" frameborder="0" allowfullscreen></iframe>
+                    <div class="media-container">
+                        <div class="video-wrapper">
+                            <iframe src="https://www.youtube.com/embed/dSUgYRWBeRQ"></iframe>
+                        </div>
                     </div>
                 </div>
                 <div class="col-lg-6">
                     <h2 class="fw-bold text-primary">Robot Giải Rubik 3x3</h2>
                     <div class="section-line"></div>
-                    <p class="text-muted">Dự án Nghiên cứu Khoa học Sinh viên 2025-2026. Hệ thống sử dụng cánh tay robot để thao tác và camera để nhận diện màu sắc.</p>
-                    
-                    <h5 class="fw-bold mt-4">Thông số kỹ thuật:</h5>
-                    <div class="mb-4">
-                        <span class="tech-badge">Arduino Mega 2560</span>
-                        <span class="tech-badge">RAMPS 1.6</span>
+                    <p class="text-muted">Nghiên cứu chế tạo hệ thống giải Rubik tự động sử dụng xử lý ảnh Python.</p>
+                    <div class="mb-3">
+                        <span class="tech-badge">Arduino Mega</span>
                         <span class="tech-badge">Python (OpenCV)</span>
                         <span class="tech-badge">Kociemba Algorithm</span>
-                        <span class="tech-badge">Nema 17 Stepper</span>
                     </div>
-
                     <ul class="list-unstyled">
-                        <li><i class="fas fa-check-circle text-success me-2"></i> Nhận diện 6 mặt màu trong 2 giây.</li>
-                        <li><i class="fas fa-check-circle text-success me-2"></i> Tốc độ giải trung bình: 18-25 bước.</li>
-                        <li><i class="fas fa-check-circle text-success me-2"></i> Giao diện điều khiển máy tính chuyên nghiệp.</li>
+                        <li><i class="fas fa-check text-success me-2"></i> Nhận diện màu sắc cực nhanh.</li>
+                        <li><i class="fas fa-check text-success me-2"></i> Cơ cấu chấp hành chính xác.</li>
                     </ul>
                 </div>
             </div>
         </div>
 
-        <div class="project-card p-4 p-md-5">
+        <div class="project-card">
             <div class="row flex-row-reverse align-items-center">
                 <div class="col-lg-6 mb-4 mb-lg-0 text-center">
-                    <img src="https://via.placeholder.com/600x400?text=Sơ+đồ+tủ+điện+PLC" alt="Dự án PLC" class="img-fluid rounded shadow">
+                    <div class="media-container">
+                        <img src="https://via.placeholder.com/600x340?text=Sơ+Đồ+Tủ+Điện+PLC" class="img-fluid">
+                    </div>
                 </div>
                 <div class="col-lg-6">
-                    <h2 class="fw-bold text-primary">Hệ Thống Điều Khiển PLC & ATS</h2>
+                    <h2 class="fw-bold text-primary">Hệ Thống PLC & ATS</h2>
                     <div class="section-line"></div>
-                    <p class="text-muted">Thiết kế và thi công tủ điện điều khiển công nghiệp trong quá trình thực tập tại Công ty Lê Gia.</p>
-                    
-                    <h5 class="fw-bold mt-4">Nội dung thực hiện:</h5>
-                    <div class="mb-4">
-                        <span class="tech-badge">TIA Portal V16/V17</span>
+                    <p class="text-muted">Thiết kế và thi công tủ điện điều khiển công nghiệp thực tế.</p>
+                    <div class="mb-3">
+                        <span class="tech-badge">TIA Portal</span>
                         <span class="tech-badge">S7-1200</span>
-                        <span class="tech-badge">HMI Weintek</span>
                         <span class="tech-badge">AutoCAD Electrical</span>
-                        <span class="tech-badge">BOQ Estimation</span>
                     </div>
-
-                    <p>Thực hiện bóc tách khối lượng vật tư, lên sơ đồ nguyên lý hệ thống ATS và lập trình logic điều khiển bơm nước luân phiên.</p>
+                    <ul class="list-unstyled">
+                        <li><i class="fas fa-check text-success me-2"></i> Lập trình logic điều khiển ATS.</li>
+                        <li><i class="fas fa-check text-success me-2"></i> Bóc tách khối lượng vật tư (BOQ).</li>
+                    </ul>
                 </div>
             </div>
         </div>
 
-    </div>
+        </div>
 
     <footer>
-        <div class="container">
+        <div class="container text-center">
             <p>&copy; 2026 Vũ Tăng Ba - Engineering Portfolio</p>
-            <div class="mt-3">
-                <a href="mailto:vutangba@gmail.com" class="text-decoration-none text-white me-3"><i class="fas fa-envelope"></i></a>
-                <a href="https://github.com/vutangba" class="text-decoration-none text-white"><i class="fab fa-github"></i></a>
-            </div>
         </div>
-                        <script>
-    // Ngăn chặn chuột phải
-    document.addEventListener('contextmenu', event => event.preventDefault());
-
-    // Ngăn chặn các phím tắt F12, Ctrl+Shift+I, Ctrl+Shift+J, Ctrl+U
-    document.onkeydown = function(e) {
-        if (e.keyCode == 123 || 
-            (e.ctrlKey && e.shiftKey && (e.keyCode == 'I'.charCodeAt(0) || e.keyCode == 'J'.charCodeAt(0))) || 
-            (e.ctrlKey && e.keyCode == 'U'.charCodeAt(0))) {
-            return false;
-        }
-    };
-</script>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.onkeydown = function(e) {
+            if (e.keyCode == 123 || (e.ctrlKey && e.shiftKey && (e.keyCode == 'I'.charCodeAt(0) || e.keyCode == 'J'.charCodeAt(0))) || (e.ctrlKey && e.keyCode == 'U'.charCodeAt(0))) return false;
+        };
+    </script>
 </body>
 </html>
